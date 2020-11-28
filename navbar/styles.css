@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: crimson;
+   height: 10vh;
+   align-items: center;
+
+}
+.logo{
+    position: relative;
+    font-size: 33px;
+    font-weight:bold;
+    color: white;
+}
+.navlinks ul{
+   display: flex;
+
+}
+.navlinks li{
+    margin: 25px;
+    font-size: 20px;
+    list-style: none;
+}
+.navlinks li a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    background: orange;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.burger div{
+    width: 29px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+.burger{
+    display: none;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+@media (max-width:1000px)
+{
+    .logo{
+        font-size: 30px;
+    }
+    .navlinks li{
+        margin: 20px;
+    }
+    img{
+        height: 100vh;
+    }
+}
+
+@media (max-width:960px)
+{
+    body{
+        overflow: hidden;
+    }
+        .navlinks{
+            position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 10vh;
+            background-color: crimson;
+            width: 50%;
+            transform: translateX(100%);
+            transition: 0.5s ease-in;
+        }
+
+        .navlinks ul{
+            flex-direction: column;
+            align-items: center;
+        }
+        .navlinks li{
+            margin: 50px;
+        }
+
+        .burger{
+            display: block;
+            cursor: pointer;
+        }
+        .burger:hover{
+            background-color: orange;
+            border-radius: 10px;
+        }
+}
+.nav-active{
+    transform: translateX(0%);
+    transition: 0.5s ease-in;
+}
